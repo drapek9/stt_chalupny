@@ -44,7 +44,7 @@ Moderní, responzivní webová stránka pro firmu STT s.r.o., která se speciali
 - **Dispečink:** 495 514 000 (Po-Pá 8-16h)
 - **Havarijní služba:** 603 208 590 (víkend 8-18h)
 - **Adresa:** Jiřího Purkyně 353, 500 02 Hradec Králové
-- **E-mail:** kancelar@chalupny.cz, sttsro@seznam.cz
+- **E-mail:** sttsro@seznam.cz
 - **IČ:** 25276786
 
 ## Technologie

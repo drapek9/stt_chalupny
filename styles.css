@@ -99,19 +99,23 @@ header {
     display: flex;
     flex-direction: column;
     line-height: 1.2;
+    max-width: 320px;
 }
 
 .logo-main {
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: bold;
     color: white;
+    line-height: 1.25;
+    display: block;
 }
 
 .logo-sub {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.8);
-    margin-top: 0.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 0.15rem;
+    display: block;
 }
 
 nav {
@@ -357,6 +361,26 @@ nav a.active {
     opacity: 0.9;
 }
 
+.quick-contact .contact-hours {
+    margin-bottom: 0;
+}
+
+.hero .contact-email {
+    margin: 0.15rem 0 0 0;
+    font-size: 1rem;
+}
+
+.hero .contact-email a {
+    color: #ec7063;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.hero .contact-email a:hover {
+    text-decoration: underline;
+    color: #c0392b;
+}
+
 /* Page Header */
 .page-header {
     background: linear-gradient(135deg, var(--primary-color) 0%, #0d3a6d 100%);
@@ -501,6 +525,33 @@ section h2 {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
     border-color: rgba(26, 84, 144, 0.1);
+}
+
+.tips-content {
+    padding-top: 1rem;
+    padding-bottom: 18rem;
+}
+
+.tips-content .tips-grid {
+    margin-top: 2.5rem;
+    gap: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tip-card {
+    border-left: 4px solid var(--primary-color);
+    box-shadow: var(--shadow-md);
+    padding: 2.5rem 3rem;
+}
+
+.tip-card p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin: 0;
+    color: var(--text-color);
 }
 
 .service-icon {
@@ -828,6 +879,35 @@ footer {
     text-decoration: underline;
 }
 
+.email-primary {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.email-secondary {
+    color: #666;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.contact-card .email-secondary {
+    color: #666;
+}
+
+.contact-card .email-secondary:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+footer .email-secondary {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+footer .email-secondary:hover {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+}
+
 .badge {
     display: inline-block;
     background-color: var(--success-color);
@@ -1057,6 +1137,18 @@ footer {
 @media (max-width: 768px) {
     .header-container {
         justify-content: space-between;
+    }
+
+    .logo {
+        max-width: 240px;
+    }
+
+    .logo-main {
+        font-size: 0.9rem;
+    }
+
+    .logo-sub {
+        font-size: 0.75rem;
     }
 
     nav ul {
