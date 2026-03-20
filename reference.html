@@ -59,8 +59,50 @@
 
     <!-- References Content -->
     <section class="container">
-        <div class="empty-content">
-            <!-- Obsah bude doplněn později -->
+        <div class="reference-list">
+            <div class="reference-item fade-in-up">
+                <h4>Vložkování komínu</h4>
+                <!-- <p class="date">2025</p> -->
+                <p>Vložkování komínu pro kondenzační kotel flexibilním ohebným kouřovodem.</p>
+                <div class="reference-gallery">
+                    <div class="reference-image-placeholder reference-image-placeholder--photo">
+                        <img src="images/reference/fotka_4.jpeg" alt="Fotografie realizace: kondenzační kotel" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="reference-item fade-in-up">
+                <h4>Komínové hlavice - černá a nerez</h4>
+                <!-- <p class="date">2025</p> -->
+                <p>Komínové hlavice při souběžném provozu kondenzačního kotle /černý plast UV odolný/ a spotřebiče na tuhá paliva. Nástavec v provedení zrcadlová nerez nebo černý komaxit.</p>
+                <div class="reference-gallery">
+                    <div class="reference-image-placeholder reference-image-placeholder--photo">
+                        <img src="images/reference/fotka_1.jpeg" alt="Fotografie realizace: servis kotle a regulace" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="reference-item fade-in-up">
+                <h4>Svislá nerez</h4>
+                <!-- <p class="date">2026</p> -->
+                <p>Vyústění pro kondenzační kotel - svislé provedení, zrcadlová nerez.</p>
+                <div class="reference-gallery">
+                    <div class="reference-image-placeholder reference-image-placeholder--photo">
+                        <img src="images/reference/fotka_2.jpeg" alt="Fotografie realizace: komínový systém" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <div class="reference-item fade-in-up">
+                <h4>Montážní plošina</h4>
+                <!-- <p class="date">2024</p> -->
+                <p>Použití montážní plošiny při omezeném přístupu - nepochozí krytina, obtížný přístup.</p>
+                <div class="reference-gallery">
+                    <div class="reference-image-placeholder reference-image-placeholder--photo">
+                        <img src="images/reference/fotka_5.jpeg" alt="Fotografie realizace: podlahové vytápění" loading="lazy">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -96,6 +138,114 @@
         </div>
     </footer>
 
+    <!-- Lightbox (kliknutím se otevřou fotky realizací) -->
+    <div class="lightbox-overlay" id="lightboxOverlay" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Zavřít">×</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Předchozí">‹</button>
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Další">›</button>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const overlay = document.getElementById('lightboxOverlay');
+            const closeBtn = document.getElementById('lightboxClose');
+            const prevBtn = document.getElementById('lightboxPrev');
+            const nextBtn = document.getElementById('lightboxNext');
+            const lightboxImg = document.getElementById('lightboxImage');
+            const captionEl = document.getElementById('lightboxCaption');
+
+            if (!overlay || !closeBtn || !lightboxImg) return;
+
+            let currentImages = [];
+            let currentIndex = 0;
+
+            const images = document.querySelectorAll('.reference-image-placeholder--photo img');
+            images.forEach(function (img) {
+                // Bude to působit jako normální odkaz (bez "zoom" kurzoru)
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', function () {
+                    const item = img.closest('.reference-item');
+                    currentImages = item
+                        ? Array.from(item.querySelectorAll('.reference-image-placeholder--photo img'))
+                        : [img];
+                    currentIndex = Math.max(0, currentImages.indexOf(img));
+                    openLightboxByIndex();
+                });
+            });
+
+            function openLightboxByIndex() {
+                const img = currentImages[currentIndex];
+                const src = img ? (img.getAttribute('src') || '') : '';
+                const alt = img ? (img.getAttribute('alt') || '') : '';
+
+                lightboxImg.src = src;
+                lightboxImg.alt = alt;
+                if (captionEl) captionEl.textContent = alt;
+
+                overlay.classList.add('open');
+                overlay.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+
+                updateNavState();
+            }
+
+            function closeLightbox() {
+                overlay.classList.remove('open');
+                overlay.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+
+                lightboxImg.src = '';
+                if (captionEl) captionEl.textContent = '';
+
+                currentImages = [];
+                currentIndex = 0;
+            }
+
+            function updateNavState() {
+                if (!prevBtn || !nextBtn) return;
+                const hasPrev = currentIndex > 0;
+                const hasNext = currentIndex < currentImages.length - 1;
+
+                prevBtn.disabled = !hasPrev;
+                nextBtn.disabled = !hasNext;
+            }
+
+            function showPrev() {
+                if (currentIndex <= 0) return;
+                currentIndex -= 1;
+                openLightboxByIndex();
+            }
+
+            function showNext() {
+                if (currentIndex >= currentImages.length - 1) return;
+                currentIndex += 1;
+                openLightboxByIndex();
+            }
+
+            closeBtn.addEventListener('click', closeLightbox);
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) closeLightbox();
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (!overlay.classList.contains('open')) return;
+
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                }
+
+                if (e.key === 'ArrowLeft') showPrev();
+                if (e.key === 'ArrowRight') showNext();
+            });
+
+            if (prevBtn) prevBtn.addEventListener('click', showPrev);
+            if (nextBtn) nextBtn.addEventListener('click', showNext);
+        });
+    </script>
 </body>
 </html>
