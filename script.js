@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (menuToggle && mainNav) {
         menuToggle.addEventListener('click', function() {
             mainNav.classList.toggle('active');
+            const open = mainNav.classList.contains('active');
+            menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
 
         // Close menu when clicking on a link
@@ -78,4 +80,15 @@ document.addEventListener('DOMContentLoaded', () => {
     animatedElements.forEach(el => {
         observer.observe(el);
     });
+});
+
+// Brands marquee loop (duplicate logos for seamless scroll)
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('brandsMarqueeTrack');
+    if (!track) return;
+
+    // Clone once only
+    if (track.dataset.cloned === 'true') return;
+    track.innerHTML = track.innerHTML + track.innerHTML;
+    track.dataset.cloned = 'true';
 });

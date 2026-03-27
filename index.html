@@ -3,8 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STT s.r.o. - Opravy a servis plynových spotřebičů | Chalupný a syn</title>
-    <meta name="description" content="Profesionální opravy a servis plynových spotřebičů v Hradci Králové. Certifikované servisní místo JUNKERS s 30+ lety zkušeností.">
+    <!-- Při nasazení na jinou doménu upravte absolutní adresy v canonical, og:* a JSON-LD. -->
+    <title>STT s.r.o. Chalupný a syn – servis plynových spotřebičů | Hradec Králové</title>
+    <meta name="description" content="Servis a opravy plynových kotlů v Hradci Králové a okolí. Certifikace Viessmann, Bosch Junkers, 30+ let praxe. Dispečink 495 514 000, havárie plynových spotřebičů 603 208 590.">
+    <link rel="canonical" href="https://chalupny.cz/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="cs_CZ">
+    <meta property="og:url" content="https://chalupny.cz/">
+    <meta property="og:title" content="STT s.r.o. Chalupný a syn – servis plynových spotřebičů | Hradec Králové">
+    <meta property="og:description" content="Servis a opravy plynových kotlů v Hradci Králové a okolí. Certifikace Viessmann, Bosch Junkers. Dispečink 495 514 000, havárie 603 208 590.">
+    <meta property="og:image" content="https://chalupny.cz/images/sidlo.jpeg">
+    <meta property="og:image:alt" content="Sídlo a provozovna STT s.r.o., servis plynových spotřebičů Hradec Králové">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="STT s.r.o. Chalupný a syn – servis plynových spotřebičů">
+    <meta name="twitter:description" content="Servis a opravy plynových kotlů v Hradci Králové. Viessmann, Bosch Junkers. Dispečink 495 514 000.">
+    <meta name="twitter:image" content="https://chalupny.cz/images/sidlo.jpeg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://chalupny.cz/#website",
+                "url": "https://chalupny.cz/",
+                "name": "STT s.r.o. – servis plynových spotřebičů Chalupný a syn",
+                "publisher": { "@id": "https://chalupny.cz/#localbusiness" },
+                "inLanguage": "cs"
+            },
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://chalupny.cz/#localbusiness",
+                "name": "STT s.r.o. (Chalupný a syn)",
+                "legalName": "STT s.r.o.",
+                "image": "https://chalupny.cz/images/sidlo.jpeg",
+                "url": "https://chalupny.cz/",
+                "telephone": "+420495514000",
+                "email": "sttsro@seznam.cz",
+                "contactPoint": [
+                    {
+                        "@type": "ContactPoint",
+                        "telephone": "+420495514000",
+                        "contactType": "customer service",
+                        "availableLanguage": "cs"
+                    },
+                    {
+                        "@type": "ContactPoint",
+                        "telephone": "+420603208590",
+                        "contactType": "emergency",
+                        "availableLanguage": "cs"
+                    }
+                ],
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Jiřího Purkyně 353",
+                    "addressLocality": "Hradec Králové",
+                    "postalCode": "500 02",
+                    "addressCountry": "CZ"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 50.2067145,
+                    "longitude": 15.8137793
+                },
+                "vatID": "CZ25276786",
+                "taxID": "25276786",
+                "areaServed": [
+                    { "@type": "City", "name": "Hradec Králové" },
+                    { "@type": "City", "name": "Pardubice" },
+                    { "@type": "City", "name": "Hořice" },
+                    { "@type": "City", "name": "Nová Paka" },
+                    { "@type": "City", "name": "Lázně Bělohrad" },
+                    { "@type": "City", "name": "Dvůr Králové" },
+                    { "@type": "City", "name": "Trutnov" },
+                    { "@type": "City", "name": "Nechanice" },
+                    { "@type": "City", "name": "Nový Bydžov" },
+                    { "@type": "City", "name": "Chrudim" }
+                ],
+                "openingHoursSpecification": [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                        "opens": "08:00",
+                        "closes": "16:00"
+                    }
+                ],
+                "description": "Opravy a servis plynových spotřebičů, montáž kotlů a komínových systémů, autorizovaný servis Viessmann a Bosch Junkers. Působnost Hradec Králové a okolí."
+            }
+        ]
+    }
+    </script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,8 +112,8 @@
                     <span>495 514 000</span>
                 </a>
             </div>
-            <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
-            <nav id="mainNav">
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Otevřít nebo zavřít menu" aria-expanded="false" aria-controls="mainNav">☰</button>
+            <nav id="mainNav" aria-label="Hlavní navigace">
                 <div class="header-phone-mobile">
                     <a href="tel:+420495514000">
                         <span class="header-phone-icon">
@@ -164,6 +251,29 @@
         </div>
     </section>
 
+    <section class="brands-marquee-section fade-in" aria-labelledby="brands-marquee-heading">
+        <div class="container">
+            <h2 id="brands-marquee-heading" class="fade-in-up brands-marquee-heading">Značky které servisujeme</h2>
+            <div class="brands-marquee">
+                <div class="brands-marquee-track" id="brandsMarqueeTrack">
+                    <div class="brand-logo-item"><img src="images/znacky/viessmann.png" alt="Logo Viessmann – plynové kotle a ohřívače v servisu STT Hradec Králové" loading="lazy"></div>
+                    <div class="brand-logo-item"><img src="images/znacky/bosch.png" alt="Logo Bosch – plynové kotle Junkers v servisu STT Hradec Králové" loading="lazy"></div>
+                    <div class="brand-logo-item"><img src="images/znacky/buderus.png" alt="Logo Buderus – plynová tepelná technika, servis STT" loading="lazy"></div>
+                    <div class="brand-logo-item"><img src="images/znacky/mora.png" alt="Logo Mora – plynové spotřebiče, servis STT Hradec Králové" loading="lazy"></div>
+                    <div class="brand-logo-item"><img src="images/znacky/thermona.png" alt="Logo Thermona – plynové kotle, servis STT" loading="lazy"></div>
+                    <div class="brand-logo-item"><img src="images/znacky/dakon.png" alt="Logo Dakon – plynová technika, servis STT" loading="lazy"></div>
+                    <div class="brand-logo-item"><img src="images/znacky/karma.png" alt="Logo Karma – plynové kotle, servis STT Hradec Králové" loading="lazy"></div>
+                    <div class="brand-logo-item"><img src="images/znacky/protherm.png" alt="Logo Protherm – plynové kotle, servis STT" loading="lazy"></div>
+                    <div class="brand-logo-item"><img src="images/znacky/vaillant.png" alt="Logo Vaillant – plynové kotle a ohřívače, servis STT" loading="lazy"></div>
+                    <div class="brand-logo-item"><img src="images/znacky/viadrus.png" alt="Logo Viadrus – plynová tepelná technika, servis STT" loading="lazy"></div>
+                    <div class="brand-logo-item"><img src="images/znacky/wolf.png" alt="Logo Wolf – plynové kotle, servis STT Hradec Králové" loading="lazy"></div>
+                    <div class="brand-logo-item"><img src="images/znacky/baxi.png" alt="Logo Baxi – plynové kotle, servis STT" loading="lazy"></div>
+                    <div class="brand-logo-item"><img src="images/znacky/gamat.png" alt="Logo Gamat – plynová technika, servis STT Hradec Králové" loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="info-strip fade-in">
         <div class="container">
             <p class="info-strip-text">
@@ -237,12 +347,14 @@
                 <h4>STT s.r.o. (Chalupný a syn)</h4>
                 <p>Opravy a servis plynových spotřebičů se 30+ lety zkušeností.</p>
                 <p><strong>IČ:</strong> 25276786</p>
+                <p class="footer-registry">Společnost zapsaná u Krajského soudu v Hradci Králové v obchodním rejstříku, oddíl C, vložka 12274</p>
             </div>
             <div class="footer-section">
                 <h4>Kontakt</h4>
                 <p><a href="tel:+420495514000">495 514 000</a> (Po–Pá 8–16 h)</p>
                 <p><a href="tel:+420603208590">603 208 590</a> (Havárie)</p>
                 <p><a href="mailto:sttsro@seznam.cz">sttsro@seznam.cz</a></p>
+                <p><strong>Datová schránka:</strong> ahu46xe</p>
                 <p>Jiřího Purkyně 353<br>500 02 Hradec Králové</p>
             </div>
             <div class="footer-section">
@@ -259,7 +371,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 STT s.r.o. Chalupný a syn. Všechna práva vyhrazena. | Servis plynových spotřebičů Hradec Králové</p>
-        </div>
+</div>
     </footer>
 
     <script src="script.js"></script>
