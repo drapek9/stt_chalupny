@@ -110,10 +110,27 @@ header {
     display: block;
 }
 
+.logo-main .logo-company {
+    font-size: 1.1em;
+    font-weight: 800;
+}
+
+.logo-main .logo-tagline {
+    font-size: 0.98em;
+    font-weight: 600;
+    opacity: 0.98;
+}
+
+.logo-main .logo-location {
+    font-size: 0.98em;
+    font-weight: 500;
+    opacity: 0.95;
+}
+
 .logo-sub {
     font-size: 0.8rem;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.7);
     margin-top: 0.15rem;
     display: block;
 }
@@ -217,7 +234,7 @@ nav a.active {
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, #0d3a6d 100%);
-    background-image: url('images/sidlo.jpeg');
+    background-image: url('images/sidlo.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
