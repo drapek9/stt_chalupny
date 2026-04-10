@@ -104,15 +104,22 @@ header {
 
 .logo-main {
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 700;
     color: white;
-    line-height: 1.25;
+    line-height: 1.2;
     display: block;
 }
 
 .logo-main .logo-company {
     font-size: 1.1em;
     font-weight: 800;
+}
+
+.logo-main .logo-company-img {
+    height: 1.9em;
+    width: auto;
+    vertical-align: -0.12em;
+    filter: brightness(0) invert(1);
 }
 
 .logo-main .logo-tagline {
@@ -130,8 +137,8 @@ header {
 .logo-sub {
     font-size: 0.8rem;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.7);
-    margin-top: 0.15rem;
+    color: rgba(255, 255, 255, 0.82);
+    margin-top: 0.1rem;
     display: block;
 }
 
