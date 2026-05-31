@@ -768,7 +768,28 @@ section h2 {
     color: #c0392b;
 }
 
-/* Map */
+/* Map & location photo */
+.map-location {
+    margin-top: 2rem;
+}
+
+.map-location-heading {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+}
+
+.map-location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    align-items: stretch;
+}
+
+.map-location .map-container {
+    margin-top: 0;
+}
+
 .map-container {
     margin-top: 2rem;
     border-radius: 8px;
@@ -781,6 +802,21 @@ section h2 {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+.location-photo {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 400px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background-color: var(--light-gray);
+}
+
+.location-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .service-area {
@@ -1608,7 +1644,12 @@ footer .email-secondary:hover {
         font-size: 1.6rem;
     }
 
-    .map-container {
+    .map-location-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container,
+    .location-photo {
         height: 300px;
     }
 
