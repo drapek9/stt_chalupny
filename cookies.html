@@ -32,20 +32,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/stt_logo_karta.png" type="image/jpeg">
     <link rel="apple-touch-icon" href="images/stt_logo_karta.png">
-    <title>Tipy a rady – bezpečné používání plynových spotřebičů | STT s.r.o.</title>
-    <meta name="description" content="Doporučení STT s.r.o.: pravidelný a kvalitní servis plynových spotřebičů dle návodu a doporučení výrobce – bezpečnost a životnost zařízení.">
-    <link rel="canonical" href="https://chalupny.cz/tipy.html">
+    <title>Zásady cookies – STT s.r.o. | analytika a soukromí</title>
+    <meta name="description" content="Informace o používání cookies na webu STT s.r.o. – analytické měření přes Google Analytics pouze po vašem souhlasu.">
+    <link rel="canonical" href="https://chalupny.cz/cookies.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="cs_CZ">
-    <meta property="og:url" content="https://chalupny.cz/tipy.html">
-    <meta property="og:title" content="Tipy a rady k plynovým spotřebičům – STT s.r.o.">
-    <meta property="og:description" content="Praktická rada: servis dle výrobce pro bezpečný provoz a dlouhou životnost kotle či ohřívače.">
+    <meta property="og:url" content="https://chalupny.cz/cookies.html">
+    <meta property="og:title" content="Zásady cookies – STT s.r.o.">
+    <meta property="og:description" content="Jak na webu STT s.r.o. používáme cookies a Google Analytics.">
     <meta property="og:image" content="https://chalupny.cz/images/sidlo.webp">
-    <meta property="og:image:alt" content="STT s.r.o. – servis plynových spotřebičů Hradec Králové">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tipy a rady – STT s.r.o.">
-    <meta name="twitter:description" content="Servis plynových spotřebičů dle návodu výrobce – rady od STT.">
-    <meta name="twitter:image" content="https://chalupny.cz/images/sidlo.webp">
+    <meta name="robots" content="noindex, follow">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -84,30 +80,57 @@
                     <li><a href="pribeh.html">Náš příběh</a></li>
                     <li><a href="reference.html">Reference</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
-                    <li><a href="tipy.html" class="active">Tipy a rady</a></li>
+                    <li><a href="tipy.html">Tipy a rady</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Tipy a rady pro bezpečné používání</h1>
-            <p class="subtitle">Praktické rady pro dlouhou životnost a bezpečnost vašich plynových spotřebičů</p>
+            <h1 class="fade-in-up">Zásady cookies</h1>
+            <p class="subtitle fade-in-up">Informace o analytickém měření na tomto webu</p>
         </div>
     </section>
 
-    <!-- Tips Content -->
-    <section class="container tips-content">
-        <div class="grid tips-grid">
-            <div class="card tip-card fade-in-up">
-                <p>Pravidelný a kvalitní servis dle návodu a doporučení výrobce.</p>
+    <section class="container cookies-content">
+        <div class="cookies-block fade-in-up">
+            <h2>Co jsou cookies</h2>
+            <p>Cookies jsou malé soubory ukládané do vašeho prohlížeče. Pomáhají webu fungovat nebo nám umožňují zjistit, jak je web využíván.</p>
+        </div>
+
+        <div class="cookies-block fade-in-up">
+            <h2>Jaké cookies používáme</h2>
+            <p>Na tomto webu používáme pouze <strong>analytické cookies</strong> služby <strong>Google Analytics</strong> (provozovatel: Google Ireland Limited). Tyto cookies nám pomáhají měřit návštěvnost, zjistit, které stránky jsou nejčastěji navštěvované, a zlepšovat obsah webu.</p>
+            <p>Analytické cookies <strong>nespouštíme bez vašeho souhlasu</strong>. Pokud je odmítnete, Google Analytics se nenačte a žádná analytická data se neodesílají.</p>
+        </div>
+
+        <div class="cookies-block fade-in-up">
+            <h2>Právní základ</h2>
+            <p>Zpracování analytických cookies probíhá na základě vašeho souhlasu podle čl. 6 odst. 1 písm. a) nařízení GDPR. Souhlas můžete kdykoli odvolat změnou volby níže.</p>
+        </div>
+
+        <div class="cookies-block fade-in-up">
+            <h2>Doba uložení souhlasu</h2>
+            <p>Vaše volba (povolit / odmítnout) ukládáme v prohlížeči (localStorage) pod klíčem <code>stt_cookie_consent</code>, abychom vás při další návštěvě znovu neptali. Volbu můžete kdykoli změnit na této stránce.</p>
+        </div>
+
+        <div class="cookies-block cookies-preferences fade-in-up">
+            <h2>Vaše nastavení</h2>
+            <p id="cookieConsentStatus" class="cookies-status">Načítání stavu…</p>
+            <div class="cookies-preferences__actions">
+                <button type="button" class="cookie-consent__btn cookie-consent__btn--reject" data-cookie-action="reject">Odmítnout analytické cookies</button>
+                <button type="button" class="cookie-consent__btn cookie-consent__btn--accept" data-cookie-action="accept">Povolit analytické cookies</button>
             </div>
         </div>
+
+        <div class="cookies-block fade-in-up">
+            <h2>Kontakt</h2>
+            <p>Máte-li dotazy ke zpracování údajů, kontaktujte nás na <a href="mailto:sttsro@seznam.cz">sttsro@seznam.cz</a> nebo na stránce <a href="kontakt.html">Kontakt</a>.</p>
+            <p style="margin-top: 0.75rem;">Více informací o zpracování dat Google Analytics najdete v <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">zásadách ochrany osobních údajů Google</a>.</p>
+        </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -138,7 +161,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 STT s.r.o. Chalupný a syn. Všechna práva vyhrazena. | <a href="cookies.html">Zásady cookies</a></p>
-</div>
+        </div>
     </footer>
 
     <script src="cookies.js"></script>

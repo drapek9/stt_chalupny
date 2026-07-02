@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3DVCDKKME"></script>
+    <script>
+      gtag('js', new Date());
+      gtag('config', 'G-K3DVCDKKME');
+      try {
+        if (localStorage.getItem('stt_cookie_consent') === 'accepted') {
+          gtag('consent', 'update', {
+            'analytics_storage': 'granted',
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied'
+          });
+        }
+      } catch (e) {}
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/stt_logo_karta.png" type="image/jpeg">
@@ -179,10 +206,11 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 STT s.r.o. Chalupný a syn. Všechna práva vyhrazena.</p>
+            <p>&copy; 2026 STT s.r.o. Chalupný a syn. Všechna práva vyhrazena. | <a href="cookies.html">Zásady cookies</a></p>
 </div>
     </footer>
 
+    <script src="cookies.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
